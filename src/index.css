@@ -28,6 +28,11 @@
 }
 
 @font-face {
+  font-family: OpenSans-Light ;
+  src: url(/src/fonts/OpenSans-Light.ttf);
+}
+
+@font-face {
   font-family: OrelegaOne-Regular;
   src: url(fonts/OrelegaOne-Regular.ttf);
 }

@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   return (
     <section>
-      <div className='flex justify-between py-5 px-0 md:px-10 md:shadow-lg md:shadow-gray-300 overflow-hidden'>
+      <div className='flex justify-between py-5 px-0 md:px-10 md:shadow-md md:shadow-gray-300 overflow-hidden'>
       <img
             src={hamburger}
             className='md:hidden ml-0 mr-5 -mt-1 cursor-pointer'
