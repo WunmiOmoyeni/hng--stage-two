@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Sequel-Sans-Bold ;
+  src: url(fonts/Sequel\ Sans\ Bold\ Obl\ Head.ttf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Sequel-Black-Head ;
+  src: url(/src/fonts/Sequel\ Sans\ Black\ Head.ttf);
+}
+
+@font-face {
+  font-family: Sequel-Light-Body ;
+  src: url(/src/fonts/Sequel\ Sans\ Light\ Body.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Regular ;
+  src: url(/src/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-Medium ;
+  src: url(/src/fonts/OpenSans-Medium.ttf);
+}
+
+@font-face {
+  font-family: OrelegaOne-Regular;
+  src: url(fonts/OrelegaOne-Regular.ttf);
 }
