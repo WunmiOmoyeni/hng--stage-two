@@ -6,6 +6,7 @@ import ClearMark from '../../images/CircleWavyCheck-f (1).svg';
 import divider from '../../images/Divider.svg';
 import Ellipse from '../../images/Ellipse 3248.svg';
 import PayMethods from '../../images/payment-methods.svg';
+import { Link } from 'react-router-dom';
 
 export default function CheckOutMain() {
   return (
@@ -89,7 +90,7 @@ export default function CheckOutMain() {
 
               <hr className='mt-[20px] mb-[20px]'/>
 
-              <div className='ml-[20px]'>
+              <div className='md:ml-[20px]'>
                 <h1 className='text-[22px]' style={{ fontFamily: 'OpenSans-Bold' }}>Installment</h1>
                 <div className='flex mt-5'>
                   <img src={Ellipse} />
@@ -99,10 +100,12 @@ export default function CheckOutMain() {
                 </div>
               </div>
 
-              <div className='flex justify-end mt-10'>
+              <div className='flex md:justify-end justify-center mt-10'>
+                <Link to = '/confirm-order'>
                 <button className='bg-[#FFA61B] px-6 py-4 rounded-lg text-[#103C4A] mt-4 text-[20px]' style={{ fontFamily: 'OpenSans-Bold' }}>
                   Confirm payment details
                 </button>
+                </Link>
               </div>
             </div>
           </div>
