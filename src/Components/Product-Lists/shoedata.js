@@ -18,6 +18,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAir1,
         price: 110.00,
+        color: "Red",
     },
     {
         id: 2,
@@ -25,6 +26,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAir1,
         price: 130.00,
+        color: "Red",
     },
     {
         id: 3,
@@ -32,6 +34,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeJordan3,
         price: 150.00,
+        color: "Red",
     },
     {
         id: 4,
@@ -39,6 +42,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeSprint,
         price: 80.00,
+        color: "White",
     },
     {
         id: 5,
@@ -53,6 +57,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAir2,
         price: 110.00,
+        color: "Grey",
     },
     {
         id: 7,
@@ -60,6 +65,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAirJordan2,
         price: 110.00,
+        color: "Blue",
     },
     {
         id: 8,
@@ -67,6 +73,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAirJordan1,
         price: 165.00,
+        color: "Black",
     },
     {
         id: 9,
@@ -74,6 +81,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAirJordan3,
         price: 120.00,
+        color: "Black",
     },
     {
         id: 10,
@@ -81,6 +89,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeSuperstar,
         price: 95.00,
+        color: "Yellow",
     },
     {
         id: 11,
@@ -88,6 +97,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAirJordan5,
         price: 190.00,
+        color: "Red",
     },
     {
         id: 12,
@@ -95,6 +105,7 @@ export const shoes = [
         description: "Women's shoes",
         image: NikeAirJordan6,
         price: 130.00,
+        color: "Red",
     },
     
 ]

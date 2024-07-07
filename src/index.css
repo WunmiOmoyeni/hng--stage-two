@@ -23,6 +23,11 @@
 }
 
 @font-face {
+  font-family: OpenSans-Bold ;
+  src: url(/src/fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
   font-family: OpenSans-Medium ;
   src: url(/src/fonts/OpenSans-Medium.ttf);
 }
