@@ -10,7 +10,7 @@ export default function Footer() {
             <div>
                 <h1 className='text-[28px] md:text-[35px] mb-[30px]' style={{fontFamily: 'Sequel-Black-Head'}}>StrideSavvy</h1>
                 <p className='hidden md:block text-[16px] w-[292px] leading-[24px]' style={{fontFamily: 'OpenSans-Regular', fontWeight: 400}}>Our vision is to provide convenience and help increase your sales business.</p>
-                <div className='flex gap-x-5 mt-[30px]'>
+                <div className='flex gap-x-5 mt-[30px] mb-[30px]'>
                     <img src={Insta}/>
                     <img src={twitter}/>
                     <img src={facebook}/>

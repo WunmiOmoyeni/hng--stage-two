@@ -22,21 +22,16 @@ function App() {
     setCart((prevCart) => [...prevCart, product]);
   };
 
-  const removeFromCart = (itemToRemove) => {
-    const updatedCart = cart.filter(item => item.id !== itemToRemove.id);
-    setCart(updatedCart);
-  };
-
   return (
     <div>
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path='/' element={<ProductListPage addToCart={addToCart} />} />
-          <Route path='/cart' element={<Cartmain cart={cart} removeFromCart={removeFromCart} />} />
+          <Route path='/cart' element={<Cartmain cart={cart} />} />
           <Route path='/check-out' element={<CheckOutMain />} />
           <Route path='/confirm-order' element={<Confirm />} />
-          <Route path='*' element={<Navigate to="/" replace />} /> {/* Redirect to ProductListPage if no match */}
+          <Route path='*' element={<Navigate to="/" replace />} /> 
         </Routes>
       </BrowserRouter>
     </div>

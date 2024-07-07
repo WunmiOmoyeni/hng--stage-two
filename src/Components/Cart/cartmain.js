@@ -4,10 +4,7 @@ import remove from '../../images/trash.svg';
 import Footer from '../Footer';
 import { Link } from 'react-router-dom';
 
-const Cartmain = ({ cart, removeFromCart }) => {
-  const handleRemoveFromCart = (itemToRemove) => {
-    removeFromCart(itemToRemove);
-  };
+const Cartmain = ({ cart}) => {
 
   return (
     <section>
@@ -41,7 +38,6 @@ const Cartmain = ({ cart, removeFromCart }) => {
                     </div>
                     <button
                       className='flex items-center text-[#820D0D] border-2 rounded-lg border-[#820d0d] p-2 mt-3'
-                      onClick={() => handleRemoveFromCart(item)}
                     >
                       Remove
                       <img src={remove} className='ml-2 mt-1 w-5 h-5' alt='remove' />
