@@ -3,16 +3,12 @@ import Cartt from '../../images/shopping-cart.svg';
 import heart from '../../images/heart.svg';
 
 const Product = ({ id, image, name, price, description, color, addToCart }) => {
-  const [isAdded, setIsAdded] = useState(() => {
-    const savedState = localStorage.getItem(`isAdded-${id}`);
-    return savedState ? JSON.parse(savedState) : false;
-  });
-
+  const [isAdded, setIsAdded] = useState()
   const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    localStorage.setItem(`isAdded-${id}`, JSON.stringify(isAdded));
-  }, [isAdded, id]);
+  // useEffect(() => {
+  //   localStorage.setItem(`isAdded-${id}`, JSON.stringify(isAdded));
+  // }, [isAdded, id]);
 
   const handleAddToCart = () => {
     const product = { id, image, name, price, description, color };
@@ -38,9 +34,9 @@ const Product = ({ id, image, name, price, description, color, addToCart }) => {
         <button
           className='flex items-center rounded-lg border-[3px] border-[#103C4A] text-[#103C4A] py-[7px] px-[30px] md:p-2'
           onClick={handleAddToCart}
-          disabled={isAdded}
+          // disabled={isAdded}
         >
-          {isAdded ? 'Added' : 'Add to Cart' }
+           {isAdded ? 'Added' : 'Add to Cart' } 
           <img src={Cartt} className='ml-2' alt='cart'/>
         </button>
       </div>

@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 export default function CheckOutMain() {
   return (
     <section>
-      <Navbar />
       <div className='flex justify-center mt-[20px]'>
         <div className='max-w-4xl w-full ml-[10px]'>
           <h1 className='text-[24px] md:text-[32px] text-[#103C4A] text-left mb-8' style={{ fontFamily: 'OpenSans-Bold' }}>

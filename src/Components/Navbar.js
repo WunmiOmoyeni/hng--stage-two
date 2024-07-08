@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../images/User-r.svg';
 import caret from '../images/CaretDown-r.svg';
-import cart from '../images/cart.svg';
+import carts from '../images/cart.svg';
 import horizont from '../images/horizont.svg';
 import hamburger from '../images/hamburger.svg';
 
-export const Navbar = () => {
+export const Navbar = ({cart}) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -46,7 +46,11 @@ export const Navbar = () => {
           <div className='flex items-center ml-[20px] md:ml-[100px] mr-[80px]'>
             <img src={horizont} className='' alt='horizont' />
             <Link to ='/cart' className='flex items-center'>
-            <img src={cart} alt='cart' className='ml-3' />
+            <img src={carts} alt='cart' className='ml-3' />
+            <div className='rounded-[50%] border-black border-[2px] px-2 -mt-6 bg-red-700'>
+            <p className='text-white'>{cart?.length}</p>
+            </div>
+            
             <p className='text-[17px] ml-2' style={{fontFamily: 'OpenSans-Medium'}}>
               Cart
             </p>

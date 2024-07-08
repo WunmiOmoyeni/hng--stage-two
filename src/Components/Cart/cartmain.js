@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar';
 import remove from '../../images/trash.svg';
 import Footer from '../Footer';
-import { Link } from 'react-router-dom';
+import { json, Link } from 'react-router-dom';
 
-const Cartmain = ({ cart}) => {
+const Cartmain = ({cart, setCart, RemoveFromCart}) => {
+
+ 
 
   return (
     <section>
-      <Navbar />
-
       <div className='flex flex-col items-center'>
         <div className='mt-8 mx-6 md:mx-16'>
           <h1 className='text-2xl md:text-4xl text-[#103C4A] text-center mb-8' style={{ fontFamily: "OpenSans-Medium" }}>
@@ -37,6 +37,7 @@ const Cartmain = ({ cart}) => {
                       <p className='text-sm text-[#103C4A]'>In stock</p>
                     </div>
                     <button
+                    onClick={()=> RemoveFromCart(item.id)}
                       className='flex items-center text-[#820D0D] border-2 rounded-lg border-[#820d0d] p-2 mt-3'
                     >
                       Remove
