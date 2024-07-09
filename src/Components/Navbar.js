@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import profile from '../images/User-r.svg';
 import caret from '../images/CaretDown-r.svg';
-import carts from '../images/cart.svg';
+import carts from '../images/cil--cart.svg';
 import horizont from '../images/horizont.svg';
 import hamburger from '../images/hamburger.svg';
 
@@ -51,7 +51,7 @@ export const Navbar = ({cart}) => {
             <p className='text-white'>{cart?.length}</p>
             </div>
             
-            <p className='text-[17px] ml-2' style={{fontFamily: 'OpenSans-Medium'}}>
+            <p className='text-[17px] ml-2 hidden md:block' style={{fontFamily: 'OpenSans-Medium'}}>
               Cart
             </p>
             </Link>

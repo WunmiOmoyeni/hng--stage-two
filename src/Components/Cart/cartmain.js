@@ -1,12 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import remove from '../../images/trash.svg';
 import Footer from '../Footer';
-import { json, Link } from 'react-router-dom';
 
-const Cartmain = ({cart, setCart, RemoveFromCart}) => {
+const Cartmain = ({ cart, setCart, RemoveFromCart }) => {
+  const [quantities, setQuantities] = useState(cart.map(() => 1));
 
- 
+  const increaseItems = (index) => {
+    setQuantities(prevQuantities => 
+      prevQuantities.map((qty, i) => (i === index ? qty + 1 : qty))
+    );
+  };
+
+  const decreaseItems = (index) => {
+    setQuantities(prevQuantities => 
+      prevQuantities.map((qty, i) => (i === index && qty > 1 ? qty - 1 : qty))
+    );
+  };
 
   return (
     <section>
@@ -32,17 +43,24 @@ const Cartmain = ({cart, setCart, RemoveFromCart}) => {
                   <div className='mt-6 md:mt-0 md:ml-6 flex flex-col justify-between'>
                     <div>
                       <p className='text-xl mb-3 font-extrabold' style={{ fontFamily: "OpenSans-Bold" }}>{item.name}</p>
-                      <p className='text-md text-[#103C4A] mb-2'>{item.description}</p>
-                      <p className='text-lg'>${item.price}.00</p>
-                      <p className='text-sm text-[#103C4A]'>In stock</p>
+                      <p className='text-md text-[#103C4A] mb-2' style={{ fontFamily: "OpenSans-Medium" }}>{item.description}</p>
+                      <p className='text-lg' style={{ fontFamily: "OpenSans-Bold" }}>${item.price}.00</p>
+                      <p className='text-md text-[#103C4A]'>In stock</p>
+                    </div>
+
+                    <div className='flex items-center mt-4'>
+                      <button className='bg-[#103c4a] text-white px-4 py-1 rounded-lg mr-4' onClick={() => decreaseItems(index)}>-</button>
+                      <p className='text-[20px]'>{quantities[index]}</p>
+                      <button className='bg-[#103c4a] text-white px-4 py-1 rounded-lg ml-4' onClick={() => increaseItems(index)}>+</button>
                     </div>
                     <button
-                    onClick={()=> RemoveFromCart(item.id)}
+                      onClick={() => RemoveFromCart(item.id)}
                       className='flex items-center text-[#820D0D] border-2 rounded-lg border-[#820d0d] p-2 mt-3'
                     >
                       Remove
                       <img src={remove} className='ml-2 mt-1 w-5 h-5' alt='remove' />
                     </button>
+                   
                   </div>
                 </li>
               ))}
@@ -54,15 +72,14 @@ const Cartmain = ({cart, setCart, RemoveFromCart}) => {
           <div className='bg-white md:bg-[#F6F6F6] w-full md:w-1/4 p-5 flex flex-col justify-center items-center mt-6 rounded-xl'>
             <p className='text-lg text-[#103C4A] hidden md:block mb-4' style={{ fontFamily: "OpenSans-Medium" }}>Cart Summary</p>
             <p className='text-[#103C4A] hidden md:block'>Subtotal <span className='text-xl ml-5' style={{ fontFamily: "OpenSans-Bold" }}>$350</span></p>
-            <Link to = '/check-out'>
-            <button className='bg-[#FFA61B] px-6 py-4 rounded-lg text-[#103C4A] mt-4' style={{ fontFamily: "OpenSans-Medium" }}>
-              Checkout ($350.00)
-            </button>
+            <Link to='/check-out'>
+              <button className='bg-[#FFA61B] px-6 py-4 rounded-lg text-[#103C4A] mt-4' style={{ fontFamily: "OpenSans-Medium" }}>
+                Checkout ($350.00)
+              </button>
             </Link>
           </div>
         )}
       </div>
-
       <Footer />
     </section>
   );
