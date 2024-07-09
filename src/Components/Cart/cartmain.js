@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
+
 import remove from '../../images/trash.svg';
 import Footer from '../Footer';
 
@@ -21,7 +21,9 @@ const Cartmain = ({ cart, setCart, RemoveFromCart }) => {
 
   return (
     <section>
+     
       <div className='flex flex-col items-center'>
+        
         <div className='mt-8 mx-6 md:mx-16'>
           <h1 className='text-2xl md:text-4xl text-[#103C4A] text-center mb-8' style={{ fontFamily: "OpenSans-Medium" }}>
             Cart ({cart.length})
@@ -48,6 +50,7 @@ const Cartmain = ({ cart, setCart, RemoveFromCart }) => {
                       <p className='text-md text-[#103C4A]'>In stock</p>
                     </div>
 
+                    <div className='flex gap-10'>
                     <div className='flex items-center mt-4'>
                       <button className='bg-[#103c4a] text-white px-4 py-1 rounded-lg mr-4' onClick={() => decreaseItems(index)}>-</button>
                       <p className='text-[20px]'>{quantities[index]}</p>
@@ -55,11 +58,13 @@ const Cartmain = ({ cart, setCart, RemoveFromCart }) => {
                     </div>
                     <button
                       onClick={() => RemoveFromCart(item.id)}
-                      className='flex items-center text-[#820D0D] border-2 rounded-lg border-[#820d0d] p-2 mt-3'
+                      className='flex items-center text-[#820D0D] border-2 rounded-lg border-[#820d0d] p-2 mt-3 '
                     >
                       Remove
                       <img src={remove} className='ml-2 mt-1 w-5 h-5' alt='remove' />
                     </button>
+                    </div>
+                   
                    
                   </div>
                 </li>

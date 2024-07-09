@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
+import Paginate from '../../images/Pagination.svg'
 import Main from '../main/Main';
 import Footer from '../Footer';
 
@@ -11,6 +12,10 @@ const ProductListPage = ({ addToCart}) => {
         <p className='text-[18px] md:text-[20px] text-[#103C4A]' style={{ fontFamily: 'OrelegaOne-Regular' }}>Shoes that help you move in your prime.</p>
       </div>
       <Main  addToCart={addToCart}/>
+      <div className='flex justify-center items-center mt-[50px]'>
+      <img src={Paginate}/>
+      </div>
+      
       <Footer />
     </div>
   );

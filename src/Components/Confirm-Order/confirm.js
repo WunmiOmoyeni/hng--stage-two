@@ -3,6 +3,7 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import divider from '../../images/Divider.svg';
 import CheckMark from '../../images/CircleWavyCheck-f.svg';
+import backbutton from '../../images/icons8-back-button-30.png'
 import { Link } from 'react-router-dom';
 
 export default function Confirm() {
@@ -10,9 +11,13 @@ export default function Confirm() {
     <section>
       <div className='flex flex-col md:flex-row justify-center mt-5 md:mt-8'>
         <div className='max-w-4xl w-full mx-4'>
+          <div className='flex'>
+          <a href='/check-out'><img src={backbutton} className='md:hidden ml-[5px] mr-3 '></img></a>
           <h1 className='text-2xl md:text-3xl text-[#103C4A] text-left mb-8' style={{ fontFamily: 'OpenSans-Bold' }}>
             Confirm Order
           </h1>
+          </div>
+        
 
           <div className='bg-[#F6F6F6] mb-5 md:mb-8 p-4 rounded-xl'>
             <div className='flex'>

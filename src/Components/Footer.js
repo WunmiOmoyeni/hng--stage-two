@@ -5,7 +5,7 @@ import facebook from '../images/Facebook.svg'
 
 export default function Footer() {
   return (
-    <section className='bg-[#103C4A] text-white py-[100px] px-[80px] mt-[100px]'>
+    <section className='bg-[#103C4A] text-white py-[100px] px-[40px] md:px-[80px] mt-[100px]'>
         <div className='flex flex-col md:flex-row justify-between mb-[50px]'>
             <div>
                 <h1 className='text-[28px] md:text-[35px] mb-[30px]' style={{fontFamily: 'Sequel-Black-Head'}}>StrideSavvy</h1>

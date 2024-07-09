@@ -32,8 +32,8 @@ export const Navbar = ({cart}) => {
           </h1>
         </div>
 
-        <div className='flex mr-[50px] items-center'>
-          <div className='hidden md:flex items-center'>
+        <div className='flex items-center'>
+          <div className='hidden md:flex items-center  mr-[100px]'>
             <img src={profile} alt='profile'/>
             <div className='md:flex items-center ml-2'>
               <p className='text-[17px]' style={{fontFamily: 'OpenSans-Medium'}}>
@@ -43,17 +43,17 @@ export const Navbar = ({cart}) => {
             </div>
           </div>
 
-          <div className='flex items-center ml-[20px] md:ml-[100px] mr-[80px]'>
-            <img src={horizont} className='' alt='horizont' />
+          <div className='flex items-center ml-auto mr-[10px]'>
+            {/* <img src={horizont} className='' alt='horizont' /> */}
             <Link to ='/cart' className='flex items-center'>
-            <img src={carts} alt='cart' className='ml-3' />
-            <div className='rounded-[50%] border-black border-[2px] px-2 -mt-6 bg-red-700'>
+            <img src={carts} alt='cart' className='ml-3 w-[30px]' />
+            <div className='rounded-[50%]  border-[2px] px-2 -mt-6 -ml-2 bg-red-700'>
             <p className='text-white'>{cart?.length}</p>
             </div>
             
-            <p className='text-[17px] ml-2 hidden md:block' style={{fontFamily: 'OpenSans-Medium'}}>
+            {/* <p className='text-[17px] ml-2 hidden md:block' style={{fontFamily: 'OpenSans-Medium'}}>
               Cart
-            </p>
+            </p> */}
             </Link>
             
           </div>
@@ -75,7 +75,7 @@ export const Navbar = ({cart}) => {
           <hr className='mb-4'/>
               <ul>
                 <li className='mb-4'>
-                  <a href='#' className='text-lg'>
+                  <a href='/' className='text-lg'>
                     Home
                   </a>
                 </li>

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import CheckMark from '../../images/CircleWavyCheck-f.svg';
+import backbutton from '../../images/icons8-back-button-30.png'
 import ClearMark from '../../images/CircleWavyCheck-f (1).svg';
 import divider from '../../images/Divider.svg';
 import Ellipse from '../../images/Ellipse 3248.svg';
@@ -11,11 +12,16 @@ import { Link } from 'react-router-dom';
 export default function CheckOutMain() {
   return (
     <section>
-      <div className='flex justify-center mt-[20px]'>
-        <div className='max-w-4xl w-full ml-[10px]'>
+      
+      <div className='flex justify-center mt-[20px] '>
+        <div className='max-w-4xl w-full ml-[10px] '>
+          <div className='flex'>
+          <a href='/cart'><img src={backbutton} className='md:hidden ml-[10px] mr-3 '></img></a>
           <h1 className='text-[24px] md:text-[32px] text-[#103C4A] text-left mb-8' style={{ fontFamily: 'OpenSans-Bold' }}>
             Payment Method
           </h1>
+          </div>
+       
           <div className='bg-[#F6F6F6] mb-[20px] hidden md:block p-4 rounded-xl'>
             <div className='flex'>
               <img src={CheckMark} className='mr-5' />
